@@ -1,0 +1,80 @@
+void manger(nourriture){
+	si (nourriture fraiche){
+		nourriture.destructeur();
+ 	}
+}
+void peur(){
+	x1 = rand();
+	y1 = rand();
+	déplacement(x1, y1);
+}
+int checkx(){
+	si (xpig == xnou){
+		varx = 0;		
+	} sinon si (xpig < xnou){
+		varx = 1;
+	} sinon{
+		varx = -1;
+	}
+	return varx;
+}
+int checky(){
+	si (ypig == ynou){
+		vary = 0;
+	} sinon si (ypig < ynou){
+		vary = 1;	
+	} sinon{
+		vary = -1;
+	}
+	return vary;
+}
+void checkdéplacement(varx, vary){
+	si (varx == 0){
+		si (vary == 0){ 
+			manger(nourriture);
+		} sinon si (vary == 1){
+			déplacement(xpig,ypig+1);
+		} sinon si (vary == -1){
+			déplacement(xpig,ypig-1);
+		} sinon {erreur}
+	} sinon si (varx == 1){
+		si (xpig + 1 != pospig){
+			déplacement(xpig+1,ypig);
+		} sinon {
+			si (vary == 0){ 
+				déplacement(xpig,ypig);
+			} sinon si (vary == 1){
+				déplacement(xpig,ypig+1);
+			} sinon si (vary == -1){
+				déplacement(xpig,ypig-1);
+			} sinon {erreur}
+		}
+	} sinon si (varx == -1){
+		si (xpig - 1 != pospig){
+			déplacement(xpig+1,ypig);
+		} sinon {
+			si (vary == 0){ 
+				déplacement(xpig,ypig);
+			} sinon si (vary == 1){
+				déplacement(xpig,ypig+1);
+			} sinon si (vary == -1){
+				déplacement(xpig,ypig-1);
+			} sinon {erreur}
+	} sinon {erreur}
+
+}
+void déplacement(xpig, ypig){
+	effacer l'ancienne position
+	ajouter la nouvelle position
+}
+
+
+
+void destructeur(){
+	finalize()...
+}
+Nourriture constructeur(){
+	x = rand();
+	y = rand();
+	timer = 10;
+}
